@@ -1,0 +1,180 @@
+/*
+Theme Name: Start-Widescreen
+Description: Child theme for Twenty Twenty-Five
+Author: Ditt namn
+Template: twentytwentyfive
+Version: 1.0
+*/
+
+
+:root :where(.xxxwp-block-media-text) {background-color: unset; color: unset;}
+
+:where(.wp-site-blocks) > *, :root :where(.is-layout-constrained) {margin-block-start: 0 !important;}
+
+:where(.wp-site-blocks *:focus) {outline-width: 0!important;}
+
+
+:root {
+--size-8px: 8px;
+--size-10px: 10px;
+--size-12px: 12px;
+--size-14px: 14px;
+--size-3vh: 3vh;
+--size-6vh: 6vh;
+--size-8vh: 8vh;
+--size-headerheight1: clamp(340px, calc(18vw + 18vh), 550px);
+--size-headerheight2: clamp(370px, calc(22vw + 22vh), 550px);
+}
+
+
+
+
+/*---------- MENYER -----------*/
+.menu {top: 0; z-index: 3; position: sticky;}
+.xxxmenu .wp-block-group {display: flex; align-items: center; line-height: 50px;}
+.xxxwp-block-navigation__submenu-container {left: 0!important;}
+
+
+.logo-menu:hover {filter: saturate(2) hue-rotate(40deg);}
+button[data-open-contact] {border: 0; background-color: unset; position: absolute; right: 8px; outline-style: unset; width: 40px;}
+
+
+/*---------- BLOCKBREDD 100% -------------*/
+.xxx {max-width: unset;}
+
+
+/*---------- BLOCKBREDD MEDIUM -------------*/
+.yyy {max-width: var(--wp--style--global--medium-size); margin: 0 auto;}
+
+
+
+
+/*---------- TYPOGRAFI -------------*/
+
+label, select {font-size: var(--wp--preset--font-size--paragraph);}
+
+.liten-knapp {text-align: center; display: inline-block;}
+
+/*--------- Avstavning -----------*/
+.rakmarginal * {overflow-wrap: break-word; hyphens: auto;}
+
+
+/*--------- Font-storlekar -----------*/
+small, .small {font-size: 16px;}
+
+
+/*---------- FÄRGER -------------*/
+.light-1, .dark-knapp { color: var(--wp--preset--color--light-1); }
+.light-2 { color: var(--wp--preset--color--light-2); }
+.light-3 { color: var(--wp--preset--color--light-3); }
+.dark-1, .dark-knapp:hover { color: var(--wp--preset--color--dark-1); }
+.dark-2 { color: var(--wp--preset--color--dark-2); }
+.dark-3 { color: var(--wp--preset--color--dark-3); }
+.white, #calculator table, #calculator select { color: var(--wp--preset--color--white); }
+.black { color: var(--wp--preset--color--black); }
+
+.bg-light-1, .dark-knapp:hover { background-color: var(--wp--preset--color--light-1); }
+.bg-light-2, .kontaktraden a { background-color: var(--wp--preset--color--light-2); }
+.bg-light-3, .kontaktraden a:hover { background-color: var(--wp--preset--color--light-3); }
+.bg-dark-1, .dark-knapp { background-color: var(--wp--preset--color--dark-1); }
+.bg-dark-2 { background-color: var(--wp--preset--color--dark-2); }
+.bg-dark-3 { background-color: var(--wp--preset--color--dark-3); }
+.bg-white { background-color: var(--wp--preset--color--white); }
+.bg-black { background-color: var(--wp--preset--color--black); }
+
+
+.wp-block-media-text a {color: inherit;}
+
+
+
+
+/*-------- Svart 3d-soft text-shadow --------*/
+.header-designstart {text-shadow: 2px 2px 4px var(--black), -1px -1px 3px #895700;}
+
+
+/*---- SPACING -----*/
+
+/*---- Padding (Liten knapp) -----*/
+.liten-knapp {padding:  var(--wp--custom--more-sizes--small);}
+
+.updown20px {padding: var(--wp--custom--more-sizes--updownmedium);}
+
+
+
+
+/*---------- BORDER -----------*/
+.stegen, .feature {border-width: 3px; border-style: solid;}
+
+/*---------- Border-radius -----------*/
+.feature, .child-pages-links a {border-radius: 12px;}
+.feature #oneblock .kostnad, .child-pages-links p, .liten-knapp {border-radius: 6px;}
+
+.feature #moreblocks .webbhotellen {border-top-left-radius: 8px; border-top-right-radius: 6px;}
+.feature #moreblocks .webbhotellen {border-top-right-radius: 8px; border-top-right-radius: 6px;}
+
+.feature #moreblocks .kostnad {border-bottom-left-radius: 8px; border-bottom-right-radius: 6px;}
+.feature #moreblocks .kostnad {border-bottom-right-radius: 8px; border-bottom-right-radius: 6px;}
+
+
+
+/*--------- Border-box -----------*/
+.wp-block-nk-awb {box-sizing: border-box;}
+
+
+/*---------- BORDERS -----------*/
+.liten-knapp {border-width: 1px; border-style: solid;}
+.child-pages-links p {border-width: 2px; border-style: solid;}
+.child-pages-links a {border-width: 4px; border-style: solid;}
+
+
+
+/*---------- KNAPPAR -----------*/
+a {text-decoration: none;}
+p a {text-decoration: underline;}
+.email, .close-popup, button:hover, .accordion, .accordion .ikon {cursor: pointer;}
+
+
+/*---------- BILDKNAPPAR - besök LOOK -----------*/
+.child-pages-links{ display: flex;}
+.child-pages-links a {width: 400px; aspect-ratio: 16 / 9; height: auto; background-size: cover; display: block; display: flex; justify-content: center; align-items: flex-end;  filter: saturate(0.8);}
+
+.child-pages-links a:hover {saturate(1.2);}
+
+
+
+
+/*-------- TRANSITIONS --------*/
+
+/*-------- Transitions FILTER --------*/
+.child-pages-links a {transition: filter 0.7s;}
+.kontaktraden a, .liten-knapp, .wp-element-button {transition: background 0.7s, background-color 0.7s;}
+
+
+/*-------- FOOTER --------*/
+.footer-content {gap: 0!important; margin-bottom: 0 !important;}
+.businessraden {align-items: center;}
+.adressraden {display: flex; flex-direction: column; gap:0;}
+.adressraden .wp-block-site-title {font-size: 20px!important;}
+
+.adressraden {padding-bottom: var(--wp--preset--spacing--space-md);}
+.kontaktraden .liten-knapp {min-width: 100px;}
+.kontaktraden * {font-size: 11px;}
+.kontaktraden svg {height: 35px; width: 35px;}
+.credraden  {padding-top: var(--wp--preset--spacing--space-xl);}
+
+/*-------- RESPONSIVITET --------*/
+@media (max-width: 600px) {
+.wp-block-media-text__media img:not(.citat img) {height: 200px!important; object-fit: cover;}
+}
+
+
+}
+
+
+
+/**** SLUT / CSS FÖR SAJTEN WIDESCREEN.MEDIA ****/
+
+
+.is-style-smal {max-width: 840px !important; margin-left: auto !important; margin-right: auto !important;}
+.is-style-bred {max-width: 1330px !important; margin-left: auto !important; margin-right: auto !important;}
+.is-style-full {max-width: 100% !important;}

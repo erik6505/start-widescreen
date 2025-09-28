@@ -1,0 +1,8 @@
+{
+	"$schema": "https://schemas.wp.org/wp/6.7/theme.json",
+	"version": 3,
+	"title": "Text shadow",
+	"slug": "text-shadow",
+	"blockTypes": ["core/heading", "core/paragraph"],
+	"styles": {"css": "text-shadow: 2px 2px 8px black;"}
+}
