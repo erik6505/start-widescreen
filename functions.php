@@ -41,6 +41,15 @@ add_action('wp_head', 'add_smooth_scroll');
 
 
 
+// *** AKTIVERA UPPDATERINGAR ***
+require get_stylesheet_directory() . '/plugin-update-checker-master/plugin-update-checker.php';
+use YahnisElsts\PluginUpdateChecker\v5\PucFactory;
+$myUpdateChecker = PucFactory::buildUpdateChecker(
+'https://github.com/erik6505/start-widescreen-theme/',
+get_stylesheet_directory() . '/functions.php', 'start-widescreen-theme'
+);
+$myUpdateChecker->setBranch('main');
+$myUpdateChecker->getVcsApi()->enableReleaseAssets();
 
 
 
